@@ -1,0 +1,6 @@
+{
+  "name": "PixEdit",
+  "description": "Professional photo editing web application featuring instant filters, background tools, image resizing, and AI auto-enhancement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

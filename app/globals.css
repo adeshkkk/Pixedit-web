@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0d0f12;
+    --bg-surface: #161920;
+    --bg-surface-elevated: #1e222b;
+    --border-color: #2a2f3d;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+  }
+
+  .theme-light {
+    --bg-main: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f1f5f9;
+    --border-color: #111827; /* Visible crisp black border */
+    --text-primary: #030712; /* Deep black text */
+    --text-secondary: #1f2937;
+  }
+}
+
+/* Professional Checkerboard Pattern for transparent canvas */
+.checkerboard-pattern {
+  background-color: #1a1d24;
+  background-image: 
+    linear-gradient(45deg, #242933 25%, transparent 25%),
+    linear-gradient(-45deg, #242933 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #242933 75%),
+    linear-gradient(-45deg, transparent 75%, #242933 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.theme-light .checkerboard-pattern {
+  background-color: #e5e7eb;
+  background-image: 
+    linear-gradient(45deg, #d1d5db 25%, transparent 25%),
+    linear-gradient(-45deg, #d1d5db 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #d1d5db 75%),
+    linear-gradient(-45deg, transparent 75%, #d1d5db 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Smooth high-performance slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #374151;
+}
+
+.theme-light input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #111827;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #38bdf8;
+  margin-top: -5px;
+  border: 2px solid #0f172a;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: transform 0.1s ease;
+}
+
+.theme-light input[type="range"]::-webkit-slider-thumb {
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #111827;
+}
